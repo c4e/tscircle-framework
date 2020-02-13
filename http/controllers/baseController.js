@@ -16,14 +16,11 @@ var BaseController = /** @class */ (function () {
         this.authenticate = function (req) {
             return new Promise(function (resolve, reject) {
                 if (_this.authProvider) {
-                    console.log('authenticating.....')
                     return _this.authProvider.authenticate(req)
                         .then(function (user) {
-                        console.log('authenticate user', user)
                         _this.authenticatedUser = user;
                         resolve(user);
                     }).catch(function (error) {
-                        console.warn('waning here', error)
                         reject(error);
                     });
                 }

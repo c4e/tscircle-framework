@@ -160,6 +160,7 @@ var CrudController = /** @class */ (function (_super) {
         var _this = this;
         this.setupAPIHandler();
         var restHandler = function (event, context) { return tslib_1.__awaiter(_this, void 0, void 0, function () {
+            context.callbackWaitsForEmptyEventLoop = false;
             var hasParentId, hasId, isCollection, handlers, resource, httpMethod, foundCustomRoute;
             return tslib_1.__generator(this, function (_a) {
                 this.event = event;
